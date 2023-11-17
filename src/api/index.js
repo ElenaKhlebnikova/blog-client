@@ -1,12 +1,12 @@
 const URL = import.meta.env.VITE_URL
 
 export const fetchAllPosts = async () => {
-    const data = await fetch(`${URL}/posts`).then((d) => d.json())
-    return data
+    const response = await fetch(`${URL}/posts`)
+    return response.json()
 }
 export const fetchOnePost = async (id) => {
-    const data = await fetch(`${URL}/posts/${id}`).then((d) => d.json())
-    return data
+    const response = await fetch(`${URL}/posts/${id}`)
+    return response.json()
 }
 
 export const deleteOnePost = async (id) => {
@@ -24,7 +24,7 @@ export const createNewPost = async (newPostData) => {
         },
         body: JSON.stringify(newPostData),
     })
-    return await response.json()
+    return response.json()
 }
 
 export const updatePost = async (id, updatedData) => {

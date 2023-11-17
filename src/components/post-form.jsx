@@ -2,7 +2,7 @@
 import { useForm } from 'react-hook-form'
 import { createNewPost, updatePost } from '../api'
 
-const UploadUpdateForm = ({ type, closeForm, post }) => {
+const PostForm = ({ type, closeForm, post }) => {
     const {
         register,
         handleSubmit,
@@ -79,9 +79,9 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
                             'This field should be longer than 5 characters',
                     },
                     maxLength: {
-                        value: 25,
+                        value: 255,
                         message:
-                            'This field should not be longer than 25 characters',
+                            'This field should not be longer than 255 characters',
                     },
                 })}
             />
@@ -118,4 +118,4 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
     )
 }
 
-export default UploadUpdateForm
+export default PostForm

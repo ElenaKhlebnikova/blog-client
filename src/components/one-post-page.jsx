@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { fetchOnePost } from '../api'
-import PostPreview from './post-preview'
+import PostPreview from './post-card'
 import { useNavigate } from 'react-router-dom'
 
 const OnePostPage = () => {

@@ -3,9 +3,9 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { deleteOnePost } from '../api'
-import UploadUpdateForm from './upload-update-form'
+import UploadUpdateForm from './post-form'
 
-const PostPreview = ({ post }) => {
+const PostCard = ({ post }) => {
     const [updateFormIsClosed, setUpdateFormIsClosed] = useState(true)
     const dateAndTimeArr = post.date.split('T')
     const time = dateAndTimeArr[1].slice(0, -8)
@@ -68,4 +68,4 @@ const PostPreview = ({ post }) => {
     )
 }
 
-export default PostPreview
+export default PostCard
