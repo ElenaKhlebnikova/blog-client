@@ -1,12 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import OnePostPage from './components/one-post-page'
 import ListOfPosts from './components/list-of-posts'
+import UploadUpdateForm from './components/upload-update-form'
 
 function App() {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <ListOfPosts />,
+            element: (
+                <div className="flex flex-col items-center w-full">
+                    <UploadUpdateForm />
+                    <ListOfPosts />
+                </div>
+            ),
         },
         {
             path: '/posts/:id',

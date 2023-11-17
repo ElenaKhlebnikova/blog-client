@@ -12,7 +12,7 @@ export const fetchOnePost = async (id) => {
 export const deleteOnePost = async (id) => {
     const response = await fetch(`${URL}/posts/${id}`, {
         method: 'DELETE',
-    }).then((d) => d.json())
+    })
     return await response.json()
 }
 
@@ -33,7 +33,7 @@ export const updatePost = async (id, updatedData) => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(updatedData),
+        body: JSON.stringify({ ...updatedData, updated: true }),
     })
     return await response.json()
 }

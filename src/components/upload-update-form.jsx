@@ -52,6 +52,11 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
                         message:
                             'This field should be longer than 5 characters',
                     },
+                    maxLength: {
+                        value: 25,
+                        message:
+                            'This field should not be longer than 25 characters',
+                    },
                 })}
             />
             {errors.username && (
@@ -70,6 +75,11 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
                         value: 5,
                         message:
                             'This field should be longer than 5 characters',
+                    },
+                    maxLength: {
+                        value: 25,
+                        message:
+                            'This field should not be longer than 25 characters',
                     },
                 })}
             />

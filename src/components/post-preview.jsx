@@ -49,6 +49,10 @@ const PostPreview = ({ post }) => {
                     <span className="text-gray-600 text-sm">
                         Created on {dateAndTimeArr[0]} at {time}
                     </span>
+                    {post.updated !== 0 && (
+                        <span className="text-blue-600 text-sm">Updated</span>
+                    )}
+
                     <h1 className="text-3xl  mt-5 text-center">{post.title}</h1>
 
                     <p className="my-5">{post.text}</p>
