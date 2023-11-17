@@ -7,6 +7,7 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm({
         defaultValues: {
             username: type === 'update' ? post.username : '',
@@ -21,6 +22,7 @@ const UploadUpdateForm = ({ type, closeForm, post }) => {
             closeForm(true)
         } else {
             createNewPost(data)
+            reset()
         }
     }
     return (

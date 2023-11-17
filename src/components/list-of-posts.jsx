@@ -4,7 +4,9 @@ import { io } from 'socket.io-client'
 import { useEffect, useState } from 'react'
 import { fetchAllPosts } from './../api'
 
-const socket = io.connect('http://localhost:8800')
+const URL = import.meta.env.VITE_URL
+
+const socket = io.connect(URL)
 
 const ListOfPosts = () => {
     const [data, setData] = useState([])
